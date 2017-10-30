@@ -18,6 +18,6 @@ public class AgentController {
 	
 	@RequestMapping("/kjham")
 	public String kjham() {
-		return "I must success!! kjham";
+		return "I must success!! kjham!!!!!!";
 	}
 }
