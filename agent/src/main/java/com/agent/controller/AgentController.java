@@ -3,6 +3,10 @@ package com.agent.controller;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+/**
+ * @author Brian H Sun
+ *
+ */
 @RestController
 public class AgentController {
 
