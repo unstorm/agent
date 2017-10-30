@@ -9,15 +9,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @see 연결확인   건주 연결 확인
  */
 @RestController
-public class AgentController { 
+public class AgentController {
 
 	@RequestMapping("/hjsun")
 	public String hjsun() {
 		return "I must success!!";
-	}
-	
-	@RequestMapping("/kjham")
-	public String kjham() {
-		return "I must success!! kjham";
 	}
 }
