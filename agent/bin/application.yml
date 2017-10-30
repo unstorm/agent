@@ -1,0 +1,13 @@
+spring:
+  profiles:
+    active: local
+  jackson:
+    serialization:
+      indent-output: true
+
+server:
+  port: 8445
+  context-path: /agent
+  error:
+    whitelabel:
+      enabled:  false
