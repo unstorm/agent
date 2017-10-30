@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
  * @author Brian H Sun
- * @see 연결확인
+ * @see 연결확인   건주 연결 확인
  */
 @RestController
 public class AgentController {
