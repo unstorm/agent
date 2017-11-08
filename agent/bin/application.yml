@@ -4,6 +4,19 @@ spring:
   jackson:
     serialization:
       indent-output: true
+  datasource:
+    common:
+    driverClassName: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@172.16.40.101:1522:o11gr2
+    username: sys as sysdba
+    password: chakra
+
+#mybatis:
+  #config-location: classpath:mybatis-config.xml
+
+#thymeleaf 를 사용하려면 아래의 조건을 넣어야 한다
+  thymeleaf:
+    check-template-location: false
 
 server:
   port: 8445
