@@ -28,7 +28,6 @@ public class AgentController {
 
 	 //@Autowired
 	  //private DataSource ds; //작성
-	
 	@RequestMapping("/hjsun")
 	public String hjsun() throws Exception {
 		//SensitiveImpl impl = new SensitiveImpl();
@@ -53,5 +52,10 @@ public class AgentController {
 	@RequestMapping("/kjham")
 	public String kjham() {
 		return "I must success!! kjham!!!!!!";
+	}
+	
+	@RequestMapping("/mkkim")
+	public String mkkim() {
+		return "Welcome to git!!!";
 	}
 }
