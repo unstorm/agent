@@ -25,9 +25,9 @@ repositories {
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('org.springframework.boot:spring-boot-starter-validation')
-	compile('org.mybatis.spring.boot:mybatis-spring-boot-starter:1.1.1')
-	compile("org.mybatis:mybatis-spring")
-	compile("org.mybatis:mybatis")
+	//compile('org.mybatis.spring.boot:mybatis-spring-boot-starter:1.1.1')
+	//compile("org.mybatis:mybatis-spring")
+	//compile("org.mybatis:mybatis")
 	compile('io.parallec:parallec-core:0.10.6')
 	compile('com.oracle:ojdbc7:12.1.0.1')	
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')

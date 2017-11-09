@@ -33,12 +33,9 @@ public class SensitiveTest {
  
     @Test
     public void testConnection() throws Exception{ //작성
-        System.out.println("ds : "+ds);
-        
-        Connection con = ds.getConnection(); //ds(DataSource)에서 Connection을 얻어내고
-        
-        System.out.println("con : "+con); //확인 후
-        
+        System.out.println("ds : "+ds);        
+        Connection con = ds.getConnection(); //ds(DataSource)에서 Connection을 얻어내고        
+        System.out.println("con : "+con); //확인 후        
         con.close(); //close
     }
 

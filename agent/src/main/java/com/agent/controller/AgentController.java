@@ -4,6 +4,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.agent.hjsun.test.HdbTest;
 import com.agent.hjsun.test.SensitiveImpl;
+import com.agent.hjsun.test.SensitiveTest;
 
 import java.sql.Connection;
 
@@ -25,15 +26,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RestController
 public class AgentController {
 
-	 @Autowired
-	  private DataSource ds; //작성
+	 //@Autowired
+	  //private DataSource ds; //작성
 	
 	@RequestMapping("/hjsun")
 	public String hjsun() throws Exception {
 		//SensitiveImpl impl = new SensitiveImpl();
 		//return impl.oracleAccessTest();
-		 
-		
 //		System.out.println("ds : "+ds);
 //	     Connection con = ds.getConnection();
 //	     System.out.println("con : "+con); //확인 후
@@ -42,6 +41,13 @@ public class AgentController {
 		test.startHdb();		
 		//return "I must success!!";
 		return test.selecthdb();
+	}
+		
+	@RequestMapping("/my")
+	public String mytest() throws Exception {
+		SensitiveTest test = new SensitiveTest();
+		test.testConnection();
+		return "success";
 	}
 	
 	@RequestMapping("/kjham")
