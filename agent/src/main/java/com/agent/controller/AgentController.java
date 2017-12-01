@@ -3,16 +3,16 @@ package com.agent.controller;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.agent.hjsun.test.HdbTest;
+import com.agent.hjsun.test.SqliteTest;
+import com.agent.hjsun.test.TimerService;
 import com.agent.hjsun.test.SensitiveImpl;
 import com.agent.hjsun.test.SensitiveTest;
-
 import java.sql.Connection;
-
 import javax.sql.DataSource;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
-
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 /**
  * <pre>
  * com.agent.controller 
@@ -25,7 +25,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @RestController
 public class AgentController {
+	
+	private Logger log = LoggerFactory.getLogger(AgentController.class);
 
+	private TimerService schedule;
+	
 	 //@Autowired
 	  //private DataSource ds; //작성
 	@RequestMapping("/hjsun")
@@ -36,10 +40,15 @@ public class AgentController {
 //	     Connection con = ds.getConnection();
 //	     System.out.println("con : "+con); //확인 후
 
-		HdbTest test = new HdbTest();
-		test.startHdb();		
+		//HdbTest test = new HdbTest();
+		//test.startHdb();		
 		//return "I must success!!";
-		return test.selecthdb();
+		//return test.selecthdb();
+		
+		SqliteTest test = new SqliteTest();
+		test.test();
+		log.info("i love you");
+		return "I must success!!";
 	}
 		
 	@RequestMapping("/my")
