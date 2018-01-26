@@ -1,34 +1,67 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
-xmlns:layout="http://www.ulthaq.net.nz/thymeleaf/layout">
+	xmlns:layout="http://www.ulthaq.net.nz/thymeleaf/layout">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
 <title>Insert title here</title>
 </head>
-<link th:href="@{/bootstrap/css/bootstrap.css}" rel="stylesheet"/>
-<link th:href="@{/bootstrap/css/bootstrap-ko.css}" rel="stylesheet"/>
-<link th:href="@{/bootstrap/css/bootstrap-responsive.css}" rel="stylesheet"/>
-<link th:href="@{/bootstrap/css/bootstrap-responsive.min.css}" rel="stylesheet"/>
-<link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+<link th:href="@{/bootstrap/css/bootstrap.css}" rel="stylesheet" />
+<link th:href="@{/bootstrap/css/bootstrap-ko.css}" rel="stylesheet" />
+<link th:href="@{/bootstrap/css/bootstrap-responsive.css}"
+	rel="stylesheet" />
+<link th:href="@{/bootstrap/css/bootstrap-responsive.min.css}"
+	rel="stylesheet" />
+<link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet" />
 <script th:src="@{/bootstrap/js/bootstrap.js}"></script>
 <script th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
 <script th:src="@{/js/jquery-3.3.1.min.js}">
+	
 </script>
 <script type="text/javascript">
-$(document).ready(function(){
-});
+	$(document).ready(function() {
+		$("#license").click(function() {
+			alert("통합 라이선스 관리");
+		});
+	});
 </script>
+<style>
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: red;
+	color: white;
+}
+</style>
 <body>
-	<div style="background-color:#064278;" class="container-fluid">	
-<!-- 			<div style="background-color:lightgreen;" class="span12">a</div> -->
-<!-- 			<div style="background-color:lightgray;" class="span12">b</div> -->
-	<div style="background-color:#064278;" class="row-fluid">
-		<div style="background-color:#064278;" class="span6">
-		<h3 style="color:white; align:left">통합 라이선스 관리</h3>
-		<button type="button" class="btn btn-lg btn-primary">default</button>
-		</div>		
+	<header>
+		<div style="background-color: #064278;" class="container-fluid">
+			<div style="background-color: #064278;" class="row-fluid">
+				<div style="background-color: #064278;" class="span11">
+					<h3 id="license" style="color: white; align: left">통합 라이선스 관리</h3>
+				</div>
+				<div style="background-color:#064278;" class="span1">
+					<button style="margin-top: 15px; width: 70px" class="btn btn-primary">설정</button>
+				</div>
+			</div>			
+			<div >
+			
+			</div>
+		</div>
+	</header>
+	<div>
+		
 	</div>
-	</div>
+	<footer>
+		<div style="background-color: #064278;" class="container-fluid">
+			<div style="background-color: #064278;" class="row-fluid">
+				<div style="background-color: lightgray;" class="span12 footer">					
+				</div>
+			</div>
+		</div>
+	</footer>
+
 </body>
 </html>
