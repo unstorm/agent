@@ -4,7 +4,11 @@ spring:
   jackson:
     serialization:
       indent-output: true
-      
+  thymeleaf:
+    cache: false
+    encoding: utf-8
+    check-template-location: false
+   
 datasource:
  sqlite:
   driverClassName: org.sqlite.JDBC
@@ -15,12 +19,11 @@ datasource:
 
 #thymeleaf 를 사용하려면 아래의 조건을 넣어야 한다
 
-thymeleaf:
- check-template-location: false
+
 
 server:
   port: 8445
-  context-path: /agent
+  context-path: /
   error:
     whitelabel:
       enabled:  false
