@@ -57,14 +57,4 @@ public class AgentController {
 		test.testConnection();
 		return "success";
 	}
-	
-	@RequestMapping("/kjham")
-	public String kjham() {
-		return "I must success!! kjham!!!!!!";
-	}
-	
-	@RequestMapping("/mkkim")
-	public String mkkim() {
-		return "Welcome to git!!!!";
-	}
 }
